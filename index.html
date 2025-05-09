@@ -6,21 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
-      --primary-color: #2c3e50;
-      --accent-color: #2980b9;
-      --bg-color: #f9f9f9;
+      --primary: #2c3e50;
+      --accent: #2980b9;
+      --light-bg: #f0f4f8;
       --card-bg: #ffffff;
-      --border-radius: 12px;
-      --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg);
       color: #333;
-      line-height: 1.6;
+      padding: 20px;
     }
 
     header {
@@ -28,10 +27,9 @@
       margin-bottom: 40px;
     }
 
-    h1 {
-      color: var(--primary-color);
-      font-size: 2.5em;
-      margin-bottom: 10px;
+    header h1 {
+      color: var(--primary);
+      font-size: 2.5rem;
     }
 
     section {
@@ -39,9 +37,12 @@
     }
 
     h2 {
-      font-size: 1.8em;
-      color: var(--primary-color);
+      color: var(--primary);
+      font-size: 1.8rem;
       margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .products {
@@ -51,11 +52,11 @@
     }
 
     .product-card {
-      background: var(--card-bg);
+      background-color: var(--card-bg);
+      border-radius: var(--radius);
       padding: 20px;
-      border-radius: var(--border-radius);
       box-shadow: var(--shadow);
-      transition: transform 0.2s ease;
+      transition: transform 0.2s;
     }
 
     .product-card:hover {
@@ -63,26 +64,34 @@
     }
 
     .product-card h3 {
-      color: var(--accent-color);
+      color: var(--accent);
       margin-bottom: 10px;
+      font-size: 1.1rem;
     }
 
     .product-card p {
       margin-bottom: 10px;
     }
 
-    ul {
+    .product-card ul {
       padding-left: 20px;
       margin: 0;
     }
 
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 40px;
+    }
+
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
+      header h1 {
+        font-size: 2rem;
       }
 
       h2 {
-        font-size: 1.5em;
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -90,11 +99,11 @@
 <body>
 
   <header>
-    <h1>Multivitamin + Mineral Products</h1>
+    <h1>🌿 Multivitamin + Mineral Products</h1>
   </header>
 
   <section>
-    <h2>👧 Kids Multivitamins</h2>
+    <h2>👧 Kids Multivitamins (7+)</h2>
     <div class="products">
       <div class="product-card">
         <h3>1. HealthyKids Multivitamin Gummies</h3>
@@ -150,11 +159,20 @@
           <li>Supports concentration and immunity</li>
         </ul>
       </div>
+
+      <div class="product-card">
+        <h3>7. Flintstones Gummies Complete</h3>
+        <p>Trusted brand with key nutrients to support kids' health.</p>
+        <ul>
+          <li>Vitamin A, C, D, E, B12</li>
+          <li>Bone and immune support</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>🧑 Adults Multivitamins</h2>
+    <h2>🧑 Adults Multivitamins (7+)</h2>
     <div class="products">
       <div class="product-card">
         <h3>1. Daily Essentials – Men & Women</h3>
@@ -209,9 +227,21 @@
           <li>Supports stress, energy, and heart health</li>
         </ul>
       </div>
+
+      <div class="product-card">
+        <h3>7. Ritual Essential for Adults</h3>
+        <p>Vegan-friendly multivitamin with traceable ingredients.</p>
+        <ul>
+          <li>Omega-3, Vitamin D3, Iron, B12</li>
+          <li>Gluten-free, non-GMO</li>
+        </ul>
+      </div>
     </div>
   </section>
 
+  <footer>
+    &copy; 2025 Multivitamin Guide | For informational purposes only.
+  </footer>
+
 </body>
 </html>
-
