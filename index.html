@@ -1,97 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Multivitamin Products</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
-      --primary: #2c3e50;
-      --accent: #2980b9;
-      --light-bg: #f0f4f8;
+      --primary-color: #2c3e50;
+      --accent-color: #27ae60;
+      --background-light: #f9f9f9;
       --card-bg: #ffffff;
-      --radius: 12px;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      --radius: 16px;
+      --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      --font-main: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--light-bg);
+      font-family: var(--font-main);
+      background: linear-gradient(to right, #e0f7fa, #fefefe);
       color: #333;
-      padding: 20px;
+      padding: 30px;
     }
 
     header {
       text-align: center;
-      margin-bottom: 40px;
-    }
-
-    header h1 {
-      color: var(--primary);
-      font-size: 2.5rem;
-    }
-
-    section {
       margin-bottom: 50px;
     }
 
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
     h2 {
-      color: var(--primary);
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 30px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
     }
 
     .product-card {
       background-color: var(--card-bg);
       border-radius: var(--radius);
-      padding: 20px;
       box-shadow: var(--shadow);
-      transition: transform 0.2s;
+      padding: 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .product-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
 
     .product-card h3 {
-      color: var(--accent);
+      color: var(--primary-color);
+      margin-top: 0;
       margin-bottom: 10px;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
     }
 
     .product-card p {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      color: #444;
     }
 
     .product-card ul {
-      padding-left: 20px;
       margin: 0;
+      padding-left: 20px;
+      font-size: 0.9rem;
+    }
+
+    .product-card ul li {
+      margin-bottom: 5px;
     }
 
     footer {
       text-align: center;
       font-size: 0.9rem;
-      color: #777;
-      margin-top: 40px;
+      color: #888;
+      margin-top: 60px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
       header h1 {
         font-size: 2rem;
       }
 
       h2 {
         font-size: 1.5rem;
+      }
+
+      .product-card {
+        padding: 18px;
       }
     }
   </style>
@@ -100,10 +124,11 @@
 
   <header>
     <h1>🌿 Multivitamin + Mineral Products</h1>
+    <p>Carefully selected vitamins for every stage of life</p>
   </header>
 
   <section>
-    <h2>👧 Kids Multivitamins (7+)</h2>
+    <h2>👧 Kids Multivitamins (Ages 7+)</h2>
     <div class="products">
       <div class="product-card">
         <h3>1. HealthyKids Multivitamin Gummies</h3>
@@ -172,7 +197,7 @@
   </section>
 
   <section>
-    <h2>🧑 Adults Multivitamins (7+)</h2>
+    <h2>🧑 Adults Multivitamins (Ages 7+)</h2>
     <div class="products">
       <div class="product-card">
         <h3>1. Daily Essentials – Men & Women</h3>
@@ -230,18 +255,19 @@
 
       <div class="product-card">
         <h3>7. Ritual Essential for Adults</h3>
-        <p>Vegan-friendly multivitamin with traceable ingredients.</p>
+        <p>Clean, transparent ingredients with delayed-release capsules.</p>
         <ul>
-          <li>Omega-3, Vitamin D3, Iron, B12</li>
-          <li>Gluten-free, non-GMO</li>
+          <li>Vegan Omega-3, B12, D3</li>
+          <li>Traceable ingredient sourcing</li>
         </ul>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Multivitamin Guide | For informational purposes only.
+    &copy; 2025 HealthyChoice Vitamins. All rights reserved.
   </footer>
 
 </body>
 </html>
+
