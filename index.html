@@ -4,43 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Multivitamin Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #2c3e50;
-      --accent-color: #27ae60;
-      --background-light: #f9f9f9;
+      --primary: #2c3e50;
+      --secondary: #27ae60;
+      --bg: #f0f4f8;
       --card-bg: #ffffff;
-      --radius: 16px;
-      --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-      --font-main: 'Segoe UI', sans-serif;
+      --radius: 18px;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      --font: 'Poppins', sans-serif;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: var(--font-main);
-      background: linear-gradient(to right, #e0f7fa, #fefefe);
-      color: #333;
-      padding: 30px;
+      font-family: var(--font);
+      background: linear-gradient(to right, #e3f2fd, #fefefe);
+      color: var(--primary);
+      padding: 40px 20px;
     }
 
     header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      color: var(--primary-color);
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 12px;
+      color: var(--primary);
     }
 
     header p {
-      font-size: 1.1rem;
-      color: #666;
+      font-size: 1.2rem;
+      color: #555;
     }
 
     section {
@@ -49,53 +51,63 @@
 
     h2 {
       font-size: 2rem;
-      color: var(--accent-color);
+      color: var(--secondary);
       margin-bottom: 30px;
       display: flex;
       align-items: center;
       gap: 12px;
+      padding-left: 10px;
+      border-left: 5px solid var(--secondary);
     }
 
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
+      gap: 30px;
     }
 
     .product-card {
-      background-color: var(--card-bg);
+      background: var(--card-bg);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 24px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 25px;
+      position: relative;
+      transition: all 0.3s ease;
     }
 
     .product-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      transform: translateY(-8px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
     }
 
     .product-card h3 {
-      color: var(--primary-color);
-      margin-top: 0;
+      color: var(--primary);
       margin-bottom: 10px;
       font-size: 1.25rem;
     }
 
     .product-card p {
-      margin-bottom: 12px;
-      font-size: 0.95rem;
+      margin-bottom: 15px;
       color: #444;
+      font-size: 0.95rem;
     }
 
     .product-card ul {
-      margin: 0;
       padding-left: 20px;
+      color: #333;
       font-size: 0.9rem;
     }
 
-    .product-card ul li {
-      margin-bottom: 5px;
+    .badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--secondary);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
     }
 
     footer {
@@ -104,34 +116,21 @@
       color: #888;
       margin-top: 60px;
     }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      .product-card {
-        padding: 18px;
-      }
-    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>🌿 Multivitamin + Mineral Products</h1>
-    <p>Carefully selected vitamins for every stage of life</p>
+    <p>Vitamins tailored for growing kids and thriving adults (Ages 7+)</p>
   </header>
 
   <section>
-    <h2>👧 Kids Multivitamins (Ages 7+)</h2>
+    <h2>👧 Kids Multivitamins</h2>
     <div class="products">
       <div class="product-card">
-        <h3>1. HealthyKids Multivitamin Gummies</h3>
+        <div class="badge">Best Value</div>
+        <h3>HealthyKids Multivitamin Gummies</h3>
         <p>Chewable gummies with essential nutrients for growing kids.</p>
         <ul>
           <li>Vitamin A, C, D, E</li>
@@ -139,135 +138,123 @@
           <li>Iron, Zinc, Iodine</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>2. LittleLife Immune Boost Drops</h3>
+        <h3>LittleLife Immune Boost Drops</h3>
         <p>Liquid multivitamin drops for toddlers and young children.</p>
         <ul>
           <li>Vitamin D3, A, B-complex</li>
           <li>Natural orange flavor</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>3. SmartyPants Kids Complete</h3>
+        <h3>SmartyPants Kids Complete</h3>
         <p>Gummies with omega-3, fiber, and 15 essential nutrients.</p>
         <ul>
           <li>Vitamin D3, B12, E, Zinc</li>
           <li>Omega-3 from fish oil</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>4. Rainbow Light Kids One™</h3>
+        <h3>Rainbow Light Kids One™</h3>
         <p>Food-based multivitamin for active kids.</p>
         <ul>
           <li>Calcium, Magnesium, Vitamin A–K</li>
           <li>Supports growth and energy</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>5. L'il Critters Gummy Vites</h3>
+        <h3>L'il Critters Gummy Vites</h3>
         <p>Fun gummy vitamins with fruity flavors kids love.</p>
         <ul>
           <li>Vitamin A, C, D, E, Zinc</li>
           <li>Gelatin-free option available</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>6. Nature’s Way Kids Smart Vita Gummies</h3>
+        <h3>Nature’s Way Kids Smart Vita Gummies</h3>
         <p>Extra vitamin D and omega-3 for brain and immune health.</p>
         <ul>
           <li>DHA, D3, Vitamin C</li>
           <li>Supports concentration and immunity</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>7. Flintstones Gummies Complete</h3>
-        <p>Trusted brand with key nutrients to support kids' health.</p>
+        <div class="badge">Top Pick</div>
+        <h3>Nordic Berries Multivitamin</h3>
+        <p>Delicious berry-flavored chewables with a wide nutrient profile.</p>
         <ul>
-          <li>Vitamin A, C, D, E, B12</li>
-          <li>Bone and immune support</li>
+          <li>15 essential vitamins & minerals</li>
+          <li>No artificial coloring, non-GMO</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>🧑 Adults Multivitamins (Ages 7+)</h2>
+    <h2>🧑 Adults Multivitamins</h2>
     <div class="products">
       <div class="product-card">
-        <h3>1. Daily Essentials – Men & Women</h3>
+        <h3>Daily Essentials – Men & Women</h3>
         <p>Full-spectrum daily multivitamin for overall health.</p>
         <ul>
           <li>Vitamin A, C, D3, E, K2</li>
           <li>B-complex, Zinc, Magnesium</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>2. Centrum Adults Multivitamin</h3>
+        <h3>Centrum Adults Multivitamin</h3>
         <p>Popular daily tablet with 23 key nutrients.</p>
         <ul>
           <li>Vitamin D, B12, Iron, Calcium</li>
           <li>Energy, immunity, and metabolism support</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>3. One A Day Men's & Women's</h3>
+        <h3>One A Day Men's & Women's</h3>
         <p>Gender-specific vitamins for daily use.</p>
         <ul>
           <li>Heart, bone, and immune support</li>
           <li>With Vitamin A–E, Zinc, Selenium</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>4. Garden of Life MyKind Organics</h3>
+        <h3>Garden of Life MyKind Organics</h3>
         <p>Certified organic multivitamin made from real food.</p>
         <ul>
           <li>Non-GMO, Vegan, Whole Food-Based</li>
           <li>High in B-complex and antioxidants</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>5. Nature Made Multi for Him/Her</h3>
+        <h3>Nature Made Multi for Him/Her</h3>
         <p>Simple, no-nonsense multivitamin for general wellness.</p>
         <ul>
           <li>25+ essential vitamins and minerals</li>
           <li>No artificial colors or preservatives</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>6. MegaFood Women’s or Men’s One Daily</h3>
+        <h3>MegaFood Women’s or Men’s One Daily</h3>
         <p>Gentle on the stomach with whole-food nutrients.</p>
         <ul>
           <li>Iron, D3, K2, Zinc</li>
           <li>Supports stress, energy, and heart health</li>
         </ul>
       </div>
-
       <div class="product-card">
-        <h3>7. Ritual Essential for Adults</h3>
-        <p>Clean, transparent ingredients with delayed-release capsules.</p>
+        <div class="badge">Organic Choice</div>
+        <h3>Ritual Essential for Men/Women</h3>
+        <p>Clean, traceable ingredients with delayed-release capsules.</p>
         <ul>
-          <li>Vegan Omega-3, B12, D3</li>
-          <li>Traceable ingredient sourcing</li>
+          <li>Omega-3, D3, Folate, Iron</li>
+          <li>Vegan, gluten-free, transparent sourcing</li>
         </ul>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 HealthyChoice Vitamins. All rights reserved.
+    <p>&copy; 2025 Wellness World. Designed with care for health-conscious families 💚</p>
   </footer>
-
 </body>
 </html>
-
